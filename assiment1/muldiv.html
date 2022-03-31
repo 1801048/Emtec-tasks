@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1">Enter Number 1:</label>
+    <input type="text" id="num1" name="num1"><br>
+    <label for="num2">Enter Number 2:</label>
+    <input type="text" id="num2" name="num2"><br>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">Division</button><br>
+    <span id="res"></span>
+
+    <script>
+        
+        function mul(){
+            var num1=document.getElementById("num1").value
+        var num2=document.getElementById("num2").value
+            document.getElementById("res").innerHTML=num1*num2
+            //document.write(res)
+        }
+        function div(){
+            var num1=document.getElementById("num1").value
+        var num2=document.getElementById("num2").value
+            document.getElementById("res").innerHTML=num1/num2
+        }
+    </script>
+</body>
+</html>

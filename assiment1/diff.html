@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="date">Enter date</label>
+    <input type="date" name="date" id="date">
+    <button onclick="getDate()">submit</button>
+<script  >
+  
+
+    
+function getDate(){ 
+    var one_day = 1000 * 60 * 60 * 24
+  
+  var present_date = new Date();
+    
+  var input = document.getElementById("date").value;
+      var dateEntered = new Date(input);
+
+
+var Result = Math.round(dateEntered.getTime() - present_date.getTime()) / (one_day);
+  
+var Final_Result = Result.toFixed(0);
+
+document.write("Number of days remaining  <br>" 
+               + present_date + "<br> and <br>" 
+               + dateEntered + " is: <br> " 
+               + Final_Result);
+}
+  
+</script>
+</body>
+</html>
